@@ -209,7 +209,18 @@ implementation
     { -- Ejercicio 11 -- }
     function get_at(list: tListaDoble; position: integer): integer;
     begin
-        WriteLn8(' No implementado');
+        var
+        current: ^nodo;
+        i : integer;
+    begin
+    while (current <> nil) and (i < postion) do
+    begin
+        current := current^.sig;
+        inc(i);
     end;
-
+    if current = nil then
+     get_at := -1
+    else
+     get_at := current^.info
+    end;
 end.
